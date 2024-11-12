@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.barra_principal{
+    background-color:rgb(44, 99, 81) ;
+    
+}
