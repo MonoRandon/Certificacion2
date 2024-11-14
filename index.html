@@ -3,41 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Shelter.2</title>
+    <title>Pet Shelter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
 </head>
 <body>
     <header class="barra_principal">
-        <div>
-            <img src="img/heart-light.png" alt=""><h1>Pet Shelter</h1>
+        <div class="logo">
+            <img src="img/heart-light.png" alt="Heart icon" class="icon">
+            <h1>Pet Shelter</h1>
+        </div>
+        <div class="nav-buttons">
             <button type="button">Find a Pet</button>
             <button type="button">About</button>
+            <button type="button" id="donateButton" onclick="removeDonateButton()">Donate</button>
         </div>
-
-        <div>
-            <h4>I´m looking for a...</h4>
-            <img src="img/paw-light.png" alt="">
-            <label for="pet">Pet</label>
-                <select name="pet" id="pet"></select>
-                <option value="dog"></option>
-                <option value="Cat"></option>
-                <option value="Any Pet"></option>
+        <div class="search">
+            <div class="pet-selection">
+                <label>I’m looking for a...</label>
+                <img src="img/paw-light.png" alt="Paw icon" class="icon">
+                <select name="pet" id="pet" onchange="showAlert()">
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Any Pet">Any Pet</option>
+                </select>
+            </div>
+            <div class="location">
+                <label>in or near...</label>
+                <img src="img/pin-light.png" alt="Pin icon" class="icon">
+                <input type="text" placeholder="City or Zip Code">
+            </div>
+            <button class="find-button">Find your new best friend</button>
         </div>
-
-        <div>
-            <h4>in or near...</h4>
-            <img src="img/pin-light.png" alt="">
-            <input type="text">
-        </div>
-
-        <div>
-            <button>Find my new best friend</button>
-        </div>
-
-
-
-        
     </header>
-    <main>
-        
+    <main class="pet-list">
+        <div class="pet-card">
+            <img src="img/pepper.jpg" alt="Pepper's image" class="pet-image">
+            <div class="pet-info">
+                <h3>Pepper</h3>
+                <p>Pepper is a slightly shy grey tabby, but she really loves showing her human affection.</p>
+                <p class="pettings">3 petting(s)</p>
+                <button onclick="increasePetting(this)">Pet Pepper</button>
+            </div>
+        </div>
+        <div class="pet-card">
+            <img src="img/bruce.jpg" alt="Bruce's image" class="pet-image">
+            <div class="pet-info">
+                <h3>Bruce</h3>
+                <p>Bruce is a loyal companion. He loves long walks and cold weather.</p>
+                <p class="pettings">5 petting(s)</p>
+                <button onclick="increasePetting(this)">Pet Bruce</button>
+            </div>
+        </div>
+        <div class="pet-card">
+            <img src="img/oscar.jpg" alt="Oscar's image" class="pet-image">
+            <div class="pet-info">
+                <h3>Oscar</h3>
+                <p>Oscar is bright, energetic, and friendly. He is looking for a good home.</p>
+                <p class="pettings">8 petting(s)</p>
+                <button onclick="increasePetting(this)">Pet Oscar</button>
+            </div>
+        </div>
     </main>
 </body>
+</html>
